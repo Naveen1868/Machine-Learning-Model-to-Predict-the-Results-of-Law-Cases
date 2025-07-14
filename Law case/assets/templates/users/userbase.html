@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Site Metas -->
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>User page</title>
+
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"/>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.css'%}"/>
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{%static 'css/style.css'%}" rel="stylesheet"/>
+    <!-- responsive style -->
+    <link href="{%static 'css/responsive.css'%}" rel="stylesheet"/>
+
+    <script type="text/javascript">
+      
+   </script>
+   <style>
+      #preview {
+         width: 300px;
+         height: 300px;
+      }
+   </style>
+</head>
+
+<body class="sub_page">
+
+  <style>
+    body {
+        background-image: url("{% static 'images/law3.jpg' %}");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+  </style>
+  
+
+<div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="{% url 'UserHome' %}">
+                    <img src="" alt="">
+                    <span>
+             
+            </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="s-1"> </span>
+                    <span class="s-2"> </span>
+                    <span class="s-3"> </span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                      <style>
+                        /* Custom styles for the navigation menu */
+                        .navbar {
+                            background-color: #4CAF50; /* Dark green background color for the navbar */
+                        }
+                    
+                        .navbar-brand img {
+                            width: 50px; /* Set the width of the logo */
+                            height: auto; /* Maintain the aspect ratio */
+                        }
+                    
+                        .navbar-toggler {
+                            background-color: #333; /* Dark gray color for the toggle button */
+                        }
+                    
+                        .navbar-toggler span {
+                            background-color: #fff; /* White color for the toggle button lines */
+                        }
+                    
+                        .navbar-nav .nav-item {
+                            margin-right: 10px; /* Add margin between navigation items */
+                        }
+                    
+                        .navbar-nav .nav-link {
+                            color: #333; /* Dark gray color for navigation links */
+                            padding: 10px; /* Increase padding for better spacing */
+                            border-radius: 5px; /* Add rounded corners to the links */
+                            transition: background-color 0.3s; /* Smooth transition for background color */
+                        }
+                    
+                        .navbar-nav .nav-link:hover {
+                            background-color: #ddd; /* Light gray background color on hover */
+                        }
+                    
+                        /* Custom styles for specific navigation items */
+                        .nav-link-user-home {
+                            background-color: #3498db; /* Blue background color for Home */
+                            border-color: #3498db; /* Border color same as the background color */
+                            color: #fff; /* White color for text */
+                        }
+                    
+                        .nav-link-algorithms {
+                            background-color: #2ecc71; /* Green background color for Algorithms */
+                            border-color: #2ecc71; /* Border color same as the background color */
+                            color: #fff; /* White color for text */
+                        }
+                    
+                        .nav-link-prediction {
+                            background-color: #e74c3c; /* Red background color for Prediction */
+                            border-color: #e74c3c; /* Border color same as the background color */
+                            color: #fff; /* White color for text */
+                        }
+                    
+                        .nav-link-logout {
+                            background-color: #f39c12; /* Orange background color for Logout */
+                            border-color: #f39c12; /* Border color same as the background color */
+                            color: #fff; /* White color for text */
+                        }
+                    </style>
+                    
+                          
+                          <!-- Your second navigation menu with colored buttons and borders -->
+                          <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'UserHome' %}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'bailable' %}">Algorithms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'training' %}">Train Model</a>
+                              </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'pred_bail' %}">Bail</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'punish' %}">Punsishment</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'index' %}">Logout</a>
+                            </li>
+                          </ul>
+                          
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end header section -->
+</div>
+
+{%block contents%}
+
+{%endblock%}
+
+<!-- footer section -->
+<footer class="container-fluid footer_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-9 mx-auto">
+               
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer section -->
+
+
+<script src="{%static 'js/jquery-3.4.1.min.js'%}"></script>
+<script src="{%static 'js/bootstrap.js'%}"></script>
+
+
+</body>
+
+</html>
+
+
+
